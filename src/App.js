@@ -1,7 +1,14 @@
 import Movie from './components/Movie';
 
 function App() {
-  return <div>Hello</div>;
+  const movies = ['1', '2', '3'];
+  return (
+    <div>
+      {movies.map((movie) => (
+        <Movie />
+      ))}
+    </div>
+  );
 }
 
 export default App;
