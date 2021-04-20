@@ -9,13 +9,15 @@ const SEARCH_API =
 
 function App() {
   const [movies, setMovies] = useState([]);
-  return (
-    <div>
-      {movies.map((movie) => (
-        <Movie />
-      ))}
-    </div>
-  );
+
+  useEffect(async () => {
+    const moviesResp = await fetch(FEATURED_API);
+    const moviesR = await moviesResp.json();
+
+    setMovies(moviesR);
+  }, []);
+
+  return <div>{movies.length > 0 && movies.map((movie) => <Movie />)}</div>;
 }
 
 export default App;
