@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import Movie from './components/Movie';
 
 const FEATURED_API =
@@ -7,7 +8,7 @@ const SEARCH_API =
   'https://api.themoviedb.org/3/search/movie?api_key=11dbf833cc3f6316214d045528716be0&query="';
 
 function App() {
-  const movies = ['1', '2', '3'];
+  const [movies, setMovies] = useState([]);
   return (
     <div>
       {movies.map((movie) => (
