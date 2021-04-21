@@ -18,7 +18,12 @@ function App() {
       });
   }, []);
 
-  return <div>{movies.length > 0 && movies.map((movie) => <Movie />)}</div>;
+  return (
+    <div>
+      {movies.length > 0 &&
+        movies.map((movie) => <Movie key={movie.id} data={movie} />)}
+    </div>
+  );
 }
 
 export default App;
