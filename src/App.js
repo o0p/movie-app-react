@@ -14,12 +14,16 @@ function App() {
     fetch(FEATURED_API)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-        setMovies(data);
+        setMovies(data.results);
       });
   }, []);
 
-  return <div>{movies.length > 0 && movies.map((movie) => <Movie />)}</div>;
+  return (
+    <div>
+      {movies.length > 0 &&
+        movies.map((movie) => <Movie key={movie.id} data={movie} />)}
+    </div>
+  );
 }
 
 export default App;
