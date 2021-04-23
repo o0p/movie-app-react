@@ -11,6 +11,10 @@ body {
   margin: 0;
 }
 
+.movie-container {
+  display: flex;
+}
+
 .movie {
   width: 300px;
 }
