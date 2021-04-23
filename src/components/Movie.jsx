@@ -7,6 +7,11 @@ const Movie = ({ title, poster_path, overview, vote_average }) => (
       <h3>{title}</h3>
       <span>{vote_average}</span>
     </div>
+
+    <div className="movie-over">
+      <h2>Oveview</h2>
+      <p>{overview}</p>
+    </div>
   </div>
 );
 export default Movie;
