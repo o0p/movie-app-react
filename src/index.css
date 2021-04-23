@@ -10,3 +10,11 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
 }
+
+.movie {
+  width: 300px;
+}
+
+.movie img {
+  max-width: 100%;
+}
