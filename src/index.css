@@ -23,7 +23,7 @@ body {
   overflow: hidden;
   position: relative;
   border-radius: 3px;
-  width: 250px;
+  width: 300px;
 }
 
 .movie img {
@@ -45,6 +45,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
+  padding: 1rem;
   color: #22254b;
   right: 0;
   background-color: white;
