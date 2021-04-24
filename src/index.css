@@ -44,7 +44,7 @@ body {
 .movie-over {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.1);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -54,7 +54,7 @@ body {
   overflow: auto;
   max-height: 100%;
   background-color: white;
-  transform: translateY(100%);
+  transform: translateY(102%);
   transition: transform 0.3s ease-in-out;
 }
 
