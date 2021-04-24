@@ -49,4 +49,5 @@ body {
   color: #22254b;
   right: 0;
   background-color: white;
+  transform: translateX(100%);
 }
