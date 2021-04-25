@@ -19,6 +19,8 @@ body {
 header {
   background-color: #373b69;
   padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .movie-container {
