@@ -9,6 +9,9 @@ body {
   color: white;
   font-family: 'Poppins', sans-serif;
   margin: 0;
+}
+
+.root {
   display: flex;
   flex-direction: column;
 }
