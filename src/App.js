@@ -22,6 +22,10 @@ function App() {
     e.preventDefault();
   };
 
+  const handleOnChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
   return (
     <>
       <header>
@@ -31,6 +35,7 @@ function App() {
             type="text"
             placeholder="Search..."
             value={searchTerm}
+            onChange={handleOnChange}
           />
         </form>
       </header>
