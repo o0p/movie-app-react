@@ -8,6 +8,7 @@ const SEARCH_API =
 
 function App() {
   const [movies, setMovies] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(async () => {
     fetch(FEATURED_API)
@@ -21,11 +22,21 @@ function App() {
     e.preventDefault();
   };
 
+  const handleOnChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
   return (
     <>
       <header>
         <form onSubmit={handleOnSubmit}>
-          <input className="search" type="text" placeholder="Search..." />
+          <input
+            className="search"
+            type="text"
+            placeholder="Search..."
+            value={searchTerm}
+            onChange={handleOnChange}
+          />
         </form>
       </header>
       <div className="movie-container">
