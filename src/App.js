@@ -17,10 +17,16 @@ function App() {
       });
   }, []);
 
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <>
       <header>
-        <input className="search" type="text" placeholder="Search..." />
+        <form onSubmit={handleOnSubmit}>
+          <input className="search" type="text" placeholder="Search..." />
+        </form>
       </header>
       <div className="movie-container">
         {movies.length > 0 &&
