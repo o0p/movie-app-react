@@ -10,7 +10,7 @@ function App() {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
-  useEffect(async () => {
+  useEffect(() => {
     fetch(FEATURED_API)
       .then((res) => res.json())
       .then((data) => {
@@ -20,6 +20,12 @@ function App() {
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
+
+    fetch(SEARCH_API + searchTerm)
+      .then((res) => res.json())
+      .then((data) => {
+        setMovies(data.results);
+      });
   };
 
   const handleOnChange = (e) => {
