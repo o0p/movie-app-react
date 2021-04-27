@@ -89,6 +89,7 @@ header {
 }
 
 .tag {
+  font-weight: 600;
   background-color: #22254b;
   border-radius: 5px;
   padding: 0.5rem;
