@@ -21,11 +21,15 @@ function App() {
   const handleOnSubmit = (e) => {
     e.preventDefault();
 
-    fetch(SEARCH_API + searchTerm)
-      .then((res) => res.json())
-      .then((data) => {
-        setMovies(data.results);
-      });
+    if (searchTerm) {
+      fetch(SEARCH_API + searchTerm)
+        .then((res) => res.json())
+        .then((data) => {
+          setMovies(data.results);
+        });
+
+      setSearchTerm('');
+    }
   };
 
   const handleOnChange = (e) => {
